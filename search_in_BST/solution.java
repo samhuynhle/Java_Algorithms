@@ -20,9 +20,9 @@ class Algorithm {
     }
 
     public TreeNode searchBSTIterative(TreeNode root, int val) { // Iterative method
-        while(root != null && root.val != val){
-            root = val < root.val ? root.left:root.right;
+        while(root != null && root.val != val){ // This is how we are traversing through the tree
+            root = val < root.val ? root.left:root.right; // Ternary
         }
-        return root;
+        return root; 
     }
 }
