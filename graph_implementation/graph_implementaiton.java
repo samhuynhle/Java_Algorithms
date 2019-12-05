@@ -2,7 +2,7 @@ import java.util.*;
 
 class Graph<T>
 {
-    // we are using a Hashmap ot store the edges in teh graph
+    // we are using a Hashmap ot store the edges in the graph
     private Map<T, List<T>> map = new HashMap<>();
 
     // this funciton adds a vertex to the graph
@@ -23,9 +23,9 @@ class Graph<T>
             addVertex(destination);
         }
         map.get(source).add(destination);
-        if(bidrectional == true)
+        if(bidirectional == true)
         {
-            map.get(desination).add(source);
+            map.get(destination).add(source);
         }
     }
 
@@ -43,7 +43,7 @@ class Graph<T>
         {
             count += map.get(v).size();
         }
-        if (bidirection == true)
+        if (bidirectional == true)
         {
             count = count / 2;
         }
