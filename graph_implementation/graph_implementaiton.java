@@ -1,5 +1,8 @@
 import java.util.*;
 
+// this implemenation of the graph is adjacency list using a HashMap.
+// The keys are the nodes and the values is linked list of neighbors
+
 class Graph<T>
 {
     // we are using a Hashmap ot store the edges in the graph
