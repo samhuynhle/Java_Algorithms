@@ -1,21 +1,17 @@
-public class LinkedListIS
-{
+public class LinkedListIS{
     node head;
     node sorted;
 
-    class node
-    {
+    class node{
         int val;
         node next;
 
-        public node(int val)
-        {
+        public node(int val){
             this.val = val;
         }
     }
 
-    void push(int val)
-    {
+    void push(int val){
         // we need to create a new node for the node
         node newnode = new node(val);
         // link the old list off the new node
@@ -25,15 +21,13 @@ public class LinkedListIS
     }
 
     // this sorts a singly linked list using insertion sort
-    void insertionSort(node headref)
-    {
+    void insertionSort(node headref){
         // we need to initialize the sorted linked list
         sorted = null;
         node current = headref;
 
         // we then traverse the given linked list and insert every node to 'sorted'
-        while(current != null)
-        {
+        while(current != null){
             // store next for the next iteration of the loop
             node next = current.next;
             // we then insert the current in teh sorted linked list
@@ -45,18 +39,15 @@ public class LinkedListIS
     }
 
     // This is the function where insert the nodes into sorted order
-    void sortedInsert(node newnode)
-    {
+    void sortedInsert(node newnode){
         // case for the head end
-        if(sorted == null || sorted.val >= newnode.val)
-        {
+        if(sorted == null || sorted.val >= newnode.val){
             newnode.next = sorted;
             sorted = newnode;
         } else {
             node current = sorted;
             // here we find the lace where the node belongs within the sorted
-            while (current.next != null && current.next.val < newnode.val)
-            {
+            while (current.next != null && current.next.val < newnode.val){
                 current = current.next;
             }
             newnode.next = current.next;
@@ -64,10 +55,8 @@ public class LinkedListIS
         }
     }
 
-    void printlist(node head)
-    {
-        while(head != null)
-        {
+    void printlist(node head){
+        while(head != null){
             System.out.print(head.val + " ");
             head = head.next;
         }
